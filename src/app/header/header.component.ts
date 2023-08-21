@@ -15,7 +15,7 @@ export class HeaderComponent {
   }
   
   slogan: string = "You one stop shop for everThing";
-  sorceImg: string = "../../assets/webstore-image-1.webp";
+  source: string = "../../assets/webstore-image-1.webp";
   
   gitSlogan(): string {
     return 'This is the new Slogan for this application' 
