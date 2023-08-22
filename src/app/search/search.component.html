@@ -1,7 +1,10 @@
 <div class="search-div">
   <span><b>Search: </b></span>
   <!--   <input type="text" (input)="changeSearchValue($event)" >;-->
-  <input type="text" [ngModel]="searchValue" />
+  <input
+    type="text"
+    [(ngModel)]="searchValue"
+    (input)="changeSearchValue($event)"
+  />
   <span>You searched for "{{ searchValue }}"</span>
 </div>
-<div (click)="searchValue = 'jaber'">Asdgasdfg</div>

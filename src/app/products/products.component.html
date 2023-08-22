@@ -1,19 +1,23 @@
 <!--  <div *ngFor = "let item of [1,2,3,4,5] " >;
     <p>Number is : {{item}}</p>;
-</div>;-->;
-
+</div>;-->
+<!--insaid the "" in can put typeScript expiration -->
 <div *ngFor="let p of protected; let i = index">
   <!--  <p>{{i}}</p>;-->
   <div class="product-container">
     <div class="image-container">
-      <img [src]="" alt="" style="max-height: 50px; max-width: 50px" />;
+      <img [src]="" alt="" style="max-height: 50px; max-width: 50px" />
     </div>
     <div>
       <div class="name-container">
         <h6>{{ p.name }}</h6>
       </div>
       <div class="detailContainer">
-        <div class="details">{{ p.available }}</div>
+        <div
+        class="details" 
+        [ngStyle]="{color: p.available === 'Available' ? 'Green' : 'Red' }">
+        {{ p.available }}
+        </div>
         <div class="details"><b>price:</b>${{ p.price }}</div>
         <div class="details"><b>color:</b>{{ p.color }}</div>
       </div>

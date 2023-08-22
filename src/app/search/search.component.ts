@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit{
     
   }
   //her we diclart proptes 
-  searchValue: string = 'Mobile';
+  searchValue: string = 'What You need';
 //(<HTMLInputElement>eventData.target).value
   changeSearchValue (eventData: Event) {
     console.log((<HTMLInputElement>eventData.target).value);
