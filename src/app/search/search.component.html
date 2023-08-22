@@ -1,4 +1,7 @@
 <div class="search-div">
-    <span><b>SEarch:</b></span>
-    <input type="text" (input)="changeSearchValue($event)" >
+  <span><b>Search: </b></span>
+  <!--   <input type="text" (input)="changeSearchValue($event)" >;-->
+  <input type="text" [ngModel]="searchValue" />
+  <span>You searched for "{{ searchValue }}"</span>
 </div>
+<div (click)="searchValue = 'jaber'">Asdgasdfg</div>

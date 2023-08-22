@@ -12,5 +12,7 @@
 }
 
 h2{
-    font-size: 45px
+    font-size: 45px;
+    text-align: center;
+    direction: ltr;
 }

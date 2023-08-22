@@ -1,0 +1,14 @@
+.notification-div{
+    margin: 0px 0px; 
+    padding: 5px 5px; 
+    background-color: #FAD1A0 ; 
+    text-align:center;
+}
+p{
+    font-size: 20px;
+}
+.close{
+    background-color: red ; 
+    float: right; 
+    margin-top: -40px;
+}

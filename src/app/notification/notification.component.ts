@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
-  template: `<div class="alert alert-success" [hidden]= "displayNotification"> 
-                <p>THis website uses cookies to provide better user experience.</p> 
-             </div>`,
-  styles: [".notification-div{margin: 10px 0px; padding: 10px 20px; background-color: #FAD1A0 ; text-align:center;}", "p{font-size: 30px;}"]
+  templateUrl: './notification.component.html',
+  styleUrls: ['./notification.component.css'],
 })
 
 
@@ -14,5 +12,9 @@ export class NotificationComponent implements OnInit{
   ngOnInit(): void {
     
   }
-  displayNotification: boolean = false;
+  public displayNotification: boolean = false;
+
+  closeNotification (eventData : Event) :void {
+    this.displayNotification = !false
+  }
 }
