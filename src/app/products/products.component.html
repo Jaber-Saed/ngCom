@@ -4,7 +4,12 @@
 <!--insaid the "" in can put typeScript expiration -->
 <div *ngFor="let p of protected; let i = index">
   <!--  <p>{{i}}</p>;-->
-  <div class="product-container">
+  <div
+    class="product-container"
+    [ngStyle]="{
+      backgroundColor: p.available === 'Available' ? '#D5F5E3' : '#FADBD8'
+    }"
+  >
     <div class="image-container">
       <img [src]="" alt="" style="max-height: 50px; max-width: 50px" />
     </div>
@@ -14,9 +19,10 @@
       </div>
       <div class="detailContainer">
         <div
-        class="details" 
-        [ngStyle]="{color: p.available === 'Available' ? 'Green' : 'Red' }">
-        {{ p.available }}
+          class="details"
+          [ngStyle]="{ color: p.available === 'Available' ? 'Green' : 'Red' }"
+        >
+          {{ p.available }}
         </div>
         <div class="details"><b>price:</b>${{ p.price }}</div>
         <div class="details"><b>color:</b>{{ p.color }}</div>
@@ -24,7 +30,15 @@
     </div>
     <div class="options">
       <button class="btn btn-success">show Details</button>
-      <button class="btn btn-warning">Buy Now</button>
+      <button
+        class="btn btn-warning"
+        *ngIf="p.available === 'Available'; else notifyme"
+      >
+        Buy Now
+      </button>
+      <ng-template #notifyme>
+        <button class="btn btn-danger">Notify me</button>
+      </ng-template>
     </div>
   </div>
 </div>
