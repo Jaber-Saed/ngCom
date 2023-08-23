@@ -9,3 +9,7 @@ input [type = text]{
     margin-left: 20px;
     border: none;
 }
+
+.changBackground{
+        background-color:white;
+}
